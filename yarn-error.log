@@ -1,0 +1,66 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /home/ben/anaconda3/bin:/home/ben/anaconda3/condabin:/home/ben/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/ben/Desktop/weather-app/package.json: Unexpected token } in JSON at position 961
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:304:30)
+      at /usr/share/yarn/lib/cli.js:315:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "weather-v1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start-dev": "webpack-dev-server --mode development",
+      "dev": "webpack --mode development",
+      "build": "webpack --mode production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "autoprefixer": "^8.6.4",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.4",
+      "babel-preset-env": "^1.7.0",
+      "clean-css-loader": "^1.0.1",
+      "clean-webpack-plugin": "^0.1.19",
+      "copy-webpack-plugin": "^4.5.2",
+      "css-loader": "^2.1.1",
+      "extract-text-webpack-plugin": "^4.0.0-beta.0",
+      "file-loader": "^1.1.11",
+      "html-webpack-plugin": "^3.2.0",
+      "mini-css-extract-plugin": "^0.4.1",
+      "node-sass": "^4.9.2",
+      "postcss-loader": "^2.1.5",
+      "sass-loader": "^7.0.3",
+      "style-loader": "^0.21.0",
+      "webpack": "^4.14.0",
+      "webpack-cli": "^3.0.8",
+      "webpack-dev-server": "^3.1.4"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

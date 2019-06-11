@@ -7,6 +7,7 @@ const $searchWrapper = document.querySelector('.search-wrapper');
 
 const GEOCODE_KEY = 'AIzaSyDKYunPGZOTx70U-G5bj8oxjQvluZBDBeA';
 const DARKSKY_KEY = 'de270f8c39e60f2cd01d6ba0065ce2f0';
+const CORS = 'https://cors-anywhere.herokuapp.com/'
 
 export const initSearch = () => {
     listeners();
@@ -35,16 +36,18 @@ const updateWeather = async (query) => {
 }
 
 const getWeatherData = async (lat, lng) => {
-    const reqLink = `https://api.darksky.net/forecast/${DARKSKY_KEY}/${lat},${lng}`
+    const reqLink = `${CORS}https://api.darksky.net/forecast/${DARKSKY_KEY}/${lat},${lng}`
     const data = await fetch(reqLink);
 
-    const parsed = await fetchData.json();
+    const parsed = await data.json();
+    console.log(data, parsed)
 }
 
 const getLatLng = async query => {
     const reqLink = `https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${GEOCODE_KEY}`
     const data = await fetch(reqLink);
     const parsed = await data.json();
+    console.log(parsed)
 
     const coords = {
         lat: parsed.results[0].geometry.location.lat,
